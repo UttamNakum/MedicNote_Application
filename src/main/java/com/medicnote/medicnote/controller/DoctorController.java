@@ -12,10 +12,10 @@ import java.util.Optional;
 @RequestMapping("/api/doctors")
 public class DoctorController {
 
-    // coomect for check
     @Autowired
     private DoctorService doctorService;
 
+    // register new doctors in data
     @PostMapping("/register")
     public Doctor    registerDoctor(@RequestBody Doctor doctor) {
         return doctorService.createDoctor(doctor);
